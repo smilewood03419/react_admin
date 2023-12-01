@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@for $i from -10 through 10 {
+  .mt#{$i} {
+    margin-top: $i * 10px;
+  }
+  .mb#{$i} {
+    margin-bottom: $i * 10px;
+  }
+  .ml#{$i} {
+    margin-left: $i * 10px;
+  }
+  .mr#{$i} {
+    margin-right: $i * 10px;
+  }
+  .m#{$i} {
+    margin: $i * 10px;
+  }
+
+  .pt#{$i} {
+    padding-top: $i * 10px;
+  }
+  .pb#{$i} {
+    padding-bottom: $i * 10px;
+  }
+  .pl#{$i} {
+    padding-left: $i * 10px;
+  }
+  .pr#{$i} {
+    padding-right: $i * 10px;
+  }
+  .p#{$i} {
+    padding: $i * 10px;
+  }
+}
+
+@for $i from 0 through 12 {
+  .col-#{$i} {
+    width: 100% / 12 * $i;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  [class*="col-"] {
+    width: 100%;
+  }
+}
